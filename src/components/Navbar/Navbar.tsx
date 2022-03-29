@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import Logo from "../../images/spacex.svg";
 
@@ -7,13 +8,23 @@ export const Navbar = () => {
       <div className={classes.logo}>
         <img src={Logo} alt="spacex" />
       </div>
-      <ul className={classes.list}>
-        <li className={classes.item}>Home</li>
-        <li className={classes.item}>Launches</li>
-        <li className={classes.item}>Rockets</li>
-        <li className={classes.item}>Missions</li>
-        <li className={classes.item}>Ships</li>
-      </ul>
+      <div className={classes.list}>
+        <Link className={classes.item} to="/">
+          home
+        </Link>
+        <Link className={classes.item} to="/launches">
+          launches
+        </Link>
+        <Link className={classes.item} to="/rockets">
+          rockets
+        </Link>
+        <Link className={classes.item} to="/missions">
+          missions
+        </Link>
+        <Link className={classes.item} to="/ships">
+          ships
+        </Link>
+      </div>
     </nav>
   );
 };
