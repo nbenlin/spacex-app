@@ -1,0 +1,8 @@
+.listContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 2rem;
+}

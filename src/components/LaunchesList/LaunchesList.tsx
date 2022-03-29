@@ -1,9 +1,10 @@
 import LaunchItem from "../LaunchItem";
 import { LaunchesListProps } from "./LaunchesList.types";
+import classes from "./LaunchesList.module.css";
 
 export const LaunchesList = ({ launchesData }: LaunchesListProps) => {
   return (
-    <>
+    <div className={classes.listContainer}>
       {launchesData.map((launch) => (
         <LaunchItem
           key={launch.id}
@@ -13,6 +14,6 @@ export const LaunchesList = ({ launchesData }: LaunchesListProps) => {
           description={launch.launch_site.site_name_long}
         />
       ))}
-    </>
+    </div>
   );
 };
