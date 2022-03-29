@@ -1,5 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import Loader from "../../components/Loader";
+import Main from "../../components/Main";
+import classes from "./Home.module.css";
 
 const GET_COMPANY_INFO = gql`
   {
@@ -15,5 +17,9 @@ export const Home = () => {
 
   if (loading) return <Loader />;
 
-  return <div>Home page.</div>;
+  return (
+    <div className={classes.home}>
+      <Main name={data.company.name} description={data.company.summary} />
+    </div>
+  );
 };
